@@ -1,0 +1,18 @@
+<div>
+  <h2>list of items {{items.length}}</h2>
+  {{#if items}}
+    <ul>
+    {{#each items as |item|}}
+      <li>
+        {{#link-to 'item.show' item.id}}{{item.name}}{{/link-to}}
+        &nbsp;
+        {{#link-to 'item.edit' item.id}}edit{{/link-to}}
+      </li>
+    {{/each}}
+    </ul>
+  {{else}}
+    No items
+  {{/if}}
+
+  {{#link-to 'item.new'}}Add Item{{/link-to}}
+</div>

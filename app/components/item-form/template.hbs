@@ -1,0 +1,10 @@
+{{#if saveMessage}}SAVED!{{/if}}
+
+<form {{action 'save' on='submit'}}>
+  {{#each model.errors as |error|}}
+    <div class="error">{{error.attribute}} {{error.message}}</div>
+  {{/each}}
+  {{input name='name' value=model.name key-press="resetMessage"}}
+  {{input name='value' value=model.value key-press="resetMessage"}}
+  <input type='submit' value='Save' />
+</form>
