@@ -1,18 +1,22 @@
-<div>
-  <h2>list of items {{items.length}}</h2>
-  {{#if items}}
-    <ul>
-    {{#each items as |item|}}
-      <li>
-        {{#link-to 'item.show' item.id}}{{item.name}}{{/link-to}}
-        &nbsp;
-        {{#link-to 'item.edit' item.id}}edit{{/link-to}}
-      </li>
-    {{/each}}
-    </ul>
-  {{else}}
-    No items
-  {{/if}}
 
-  {{#link-to 'item.new'}}Add Item{{/link-to}}
+<div class="card-deck">
+  {{#each items as |item|}}
+    <div class="card">
+      <div class="card-block">
+         <h4 class="card-title">
+           {{#link-to 'item.edit' item.id class="card-link"}}{{item.name}}{{/link-to}}
+        </h4>
+        {{#if item.value}}
+        <p class="card-text"><small class="text-muted">&euro;{{item.value}}</small></p>
+        {{/if}}
+      </div>
+    </div>
+  {{/each}}
+  <div class="card card-inverse card-primary text-xs-center">
+    <div class="card-block">
+      <h4 class="card-title">
+        {{#link-to 'item.new' class="card-link"}}Add Item{{/link-to}}
+      </h4>
+    </div>
+  </div>
 </div>
