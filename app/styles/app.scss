@@ -1,2 +1,24 @@
 $enable-flex: true;
+$primary-color: #FF6458;
+$enable-rounded: false;
+$enable-gradients: true;
+$body-bg: #fefefe;
+$brand-primary: #FF6458;
+$navbar-dark-color: transparent;
+
 @import 'bootstrap';
+@import 'utils/variables';
+
+.main-header {
+  background: $primary-color;
+  margin-bottom: 20px;
+}
+
+.nav-link, .navbar-brand {
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
