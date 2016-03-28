@@ -51,3 +51,25 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+
+
+
+##########
+
+Todo list
+
+  image upload
+  table view
+    amount totals
+  animations - liquidfire
+  deployment to heroku and aws, cloudfront
+    optimisation
+  image resizing - rails
+    webp
+  responsive
+    responsive images
+  register/login
+  inline editing
+  multiple images
+  item descriptions
+  date purchase / age

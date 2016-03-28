@@ -4,16 +4,19 @@ export default Ember.Component.extend({
   actions: {
     save: function() {
       var component = this;
-      this.get('model').save().then(function() {
-        component.set('saveMessage', true);
+      component.get('model').save().then(function() {
+        component.set('showSaveMessage', true);
       }).catch(function() {
-        component.set('saveMessage', false);
+        component.set('showSaveMessage', false);
       });
       return true;
-    },
-    resetMessage: function() {
-      this.set('saveMessage', false);
     }
   },
-  saveMessage: false
+  showSaveMessage: false,
+  shouldShowSaveMessage: Ember.computed('model.hasDirtyAttributes', function() {
+    if (this.get('model').get('hasDirtyAttributes')) {
+      this.set('showSaveMessage', false);
+    }
+    return this.get('showSaveMessage');
+  })
 });
