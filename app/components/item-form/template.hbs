@@ -5,5 +5,10 @@
 {{#em-form model=model submitButton=false action="save"}}
   {{em-input label="Name" property="name" onKeyUp=true key-press="resetMessage"}}
   {{em-input label="Value" property="value" onKeyUp=true key-press="resetMessage" }}
+
+  {{#if model.image_thumb_url}}
+    <img src={{model.image_thumb_url}} alt="{{model.name}}">
+  {{/if}}
+  <input type='file' id='file-field'/>
   {{em-form-submit text="Save" classes="btn btn-primary"}}
 {{/em-form}}

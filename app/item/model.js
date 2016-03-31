@@ -7,7 +7,9 @@ var attr = DS.attr;
 export default DS.Model.extend(EmberValidations, {
   name: attr('string'),
   value: attr('string'),
-  // project: belongsTo('project'),
+  image: attr('image'),
+  image_thumb_url: attr('image-url'),
+  image_medium_url: attr('image-url'),
   created_at: attr('date'),
   updated_at: attr('date'),
   validations: {
