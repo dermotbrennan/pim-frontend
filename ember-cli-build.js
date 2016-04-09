@@ -5,7 +5,12 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     dotEnv: {
-      clientAllowedKeys: ['API_BASE_URL']
+      clientAllowedKeys: ['API_BASE_URL'],
+      path: {
+        development: '.env',
+        test: '.env.test',
+        production: '.env.production'
+      }
     }
     // Add options here
   });
