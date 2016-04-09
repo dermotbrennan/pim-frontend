@@ -6,7 +6,7 @@ var attr = DS.attr;
 
 export default DS.Model.extend(EmberValidations, {
   name: attr('string'),
-  value: attr('string'),
+  value: attr('number'),
   image: attr('image'),
   image_thumb_url: attr('image-url'),
   image_medium_url: attr('image-url'),

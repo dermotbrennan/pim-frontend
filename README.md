@@ -58,18 +58,20 @@ Specify what it takes to deploy your app.
 
 Todo list
 
-  image upload
-  table view
+  image upload - done
+  table view - done
     amount totals
   animations - liquidfire
   deployment to heroku and aws, cloudfront
     optimisation
-  image resizing - rails
-    webp
-  responsive
-    responsive images
   register/login
   inline editing
+  image resizing - rails
+    webp
+  responsive layout
+    responsive images using thombor on heroku
   multiple images
   item descriptions
   date purchase / age
+  multiple lists
+  admin area

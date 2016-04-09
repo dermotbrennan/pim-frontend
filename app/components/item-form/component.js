@@ -10,6 +10,7 @@ export default Ember.Component.extend({
       model.set('image', file);
 
       model.save().then(function() {
+        console.log("saved..");
         component.set('showSaveMessage', true);
       }).catch(function() {
         component.set('showSaveMessage', false);

@@ -22,3 +22,40 @@ $navbar-dark-color: transparent;
     text-decoration: underline;
   }
 }
+
+.item-card {
+  color: #fff;
+  background: #fff;
+  min-width: 200px;
+  max-width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.item-card-footer {
+  width: 100%;
+  background-color: rgba(132,132,132, 0.8);
+  border-top: 0;
+}
+
+.item-card-title {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 15px;
+
+  a {
+    color: inherit;
+  }
+}
+
+.item-image-td {
+  width: 110px;
+}
+
+.item-card-trash {
+  float: right;
+}
