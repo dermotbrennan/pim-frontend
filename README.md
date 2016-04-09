@@ -42,3 +42,7 @@ You will need the following things properly installed on your computer.
 - multiple lists per user
 - admin area
 - Tests
+
+# Legal
+
+[Licensed under the MIT license](http://www.opensource.org/licenses/mit-license.php)
