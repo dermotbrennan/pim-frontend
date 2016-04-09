@@ -18,6 +18,8 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    apiBaseURL: process.ENV.API_BASE_URL,
+
     contentSecurityPolicy: {
       'style-src': "'self' 'unsafe-inline'"
     }
@@ -29,7 +31,6 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.apiBaseURL = 'http://127.0.0.1:3000';
   }
 
   if (environment === 'test') {
