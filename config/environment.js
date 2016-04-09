@@ -18,7 +18,7 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    apiBaseURL: process.ENV.API_BASE_URL,
+    apiBaseURL: process.env.API_BASE_URL,
 
     contentSecurityPolicy: {
       'style-src': "'self' 'unsafe-inline'"
