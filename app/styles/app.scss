@@ -59,3 +59,14 @@ $navbar-dark-color: transparent;
 .item-card-trash {
   float: right;
 }
+
+.form-horizontal .row {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.has-success .form-control-feedback {
+  position: absolute;
+  right: -5px;
+  top: 3px;
+}

@@ -1,7 +1,9 @@
 import DS from 'ember-data';
 import ENV from 'inventory-client/config/environment';
+import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
-export default DS.JSONAPIAdapter.extend({
+export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
+  authorizer: 'authorizer:application',
   coalesceFindRequests: true,
   // host: 'http://127.0.0.1:3000',
   host: ENV.apiBaseURL

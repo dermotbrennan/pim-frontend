@@ -1,0 +1,23 @@
+<div class="col-md-4 center-block">
+  {{#if session.isAuthenticated}}
+    <p>You are already signed in</p>
+  {{else}}
+    <h1>Sign In</h1>
+
+    {{#if errorMessage}}
+      <div class="alert alert-danger" role="alert">{{errorMessage}}</div>
+    {{/if}}
+
+    <form {{action 'authenticate' on='submit'}}>
+      <fieldset class="form-group">
+        <label for="identification" class="sr-only">Username</label>
+        {{input id='identification' placeholder='Enter Login' value=identification class="form-control"}}
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="password" class="sr-only">Password</label>
+        {{input id='password' placeholder='Enter Password' type='password' value=password class="form-control"}}
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  {{/if}}
+</div>

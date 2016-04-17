@@ -51,5 +51,21 @@ module.exports = function(environment) {
 
   }
 
+  ENV['ember-simple-auth'] = {
+    // authorizer: 'simple-auth-authorizer:token',
+    authorizer: 'authorizer:token',
+    crossOriginWhitelist: ['*']
+  };
+  ENV['ember-simple-auth-token'] = {
+    identificationField: 'username',
+    passwordField: 'password',
+    refreshAccessTokens: false,
+    serverTokenEndpoint: ENV.apiBaseURL + '/knock/auth_token',
+    // serverTokenRefreshEndpoint: ENV.apiBaseURL + '/knock/auth_token',
+    tokenPropertyName: 'jwt',
+    timeFactor: 1000,
+    refreshLeeway: 300 // Refresh the token 5 minutes (300s) before it expires.
+  };
+
   return ENV;
 };

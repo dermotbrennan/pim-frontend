@@ -1,0 +1,48 @@
+<div class="col-md-8">
+
+  <h1>Manage Account</h1>
+
+  Hiya, {{sessionAccount.user.name}}.
+
+  <hr>
+
+  <h2>Change Details</h2>
+
+  {{#if showSaveMessage}}
+    <div class="alert alert-success" role="alert">Details Saved!</div>
+  {{/if}}
+
+  {{#if errorMessage}}
+    <div class="alert alert-danger" role="alert">{{errorMessage}}</div>
+  {{/if}}
+
+  {{#em-form model=model submitButton=false action="changeDetails" form_layout="horizontal"}}
+    {{em-input label="Username" class="row" property="username" onKeyUp=true key-press="resetMessage"}}
+    {{em-input label="Name" class="row" property="name" onKeyUp=true key-press="resetMessage"}}
+    {{em-form-submit text="Update Details" classes="btn btn-primary"}}
+  {{/em-form}}
+
+  <hr>
+
+  <h2>Change Password</h2>
+
+  {{#if showChangePasswordSaveMessage}}
+    <div class="alert alert-success" role="alert">Details Saved!</div>
+  {{/if}}
+
+  {{#if errorChangePasswordMessage}}
+    <div class="alert alert-danger" role="alert">{{errorChangePasswordMessage}}</div>
+  {{/if}}
+
+  <form {{action 'changePassword' on='submit'}}>
+    <fieldset class="form-group">
+      <label for="password" class="sr-only">Enter New Password</label>
+      {{input id='password' placeholder='Enter New Password' type='password' value=password class="form-control"}}
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="password_confirmation" class="sr-only">Confirm Password</label>
+      {{input id='password_confirmation' placeholder='Confirm New Password' type='password' value=password_confirmation class="form-control"}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Change Password</button>
+  </form>
+</div>
