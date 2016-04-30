@@ -1,0 +1,8 @@
+<div class="card list-card" style={{backgroundStyle}} {{action "goToList" list}}>
+  <div class="card-footer item-card-footer">
+    {{fa-icon "trash" size=1 click=(action "deleteList" list) class="list-card-trash"}}
+    <h5 class="list-card-title">
+      {{list.name}}
+    </h5>
+  </div>
+</div>

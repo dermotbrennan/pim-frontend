@@ -56,7 +56,7 @@ $navbar-dark-color: transparent;
   width: 110px;
 }
 
-.item-card-trash {
+.item-card-trash, .list-card-trash {
   float: right;
 }
 
@@ -69,4 +69,16 @@ $navbar-dark-color: transparent;
   position: absolute;
   right: -5px;
   top: 3px;
+}
+
+.list-card {
+  @extend .item-card;
+}
+
+.list-card-footer {
+  @extend .item-card-footer;
+}
+
+.list-card-title {
+  @extend .item-card-title;
 }

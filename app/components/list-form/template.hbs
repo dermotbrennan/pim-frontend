@@ -1,0 +1,8 @@
+{{#if shouldShowSaveMessage}}
+<div class="alert alert-success" role="alert">SAVED!</div>
+{{/if}}
+
+{{#em-form model=model submitButton=false action="save"}}
+  {{em-input label="Name" property="name" onKeyUp=true key-press="resetMessage"}}
+  {{em-form-submit text="Save" classes="btn btn-primary"}}
+{{/em-form}}

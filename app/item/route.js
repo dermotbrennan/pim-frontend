@@ -1,4 +1,7 @@
-import Ember from 'ember';
-import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
+import Authenticated from '../routes/authenticated';
 
-export default Ember.Route.extend(AuthenticatedRouteMixin);
+export default Authenticated.extend({
+  model: function (params) {
+    return this.store.findRecord('list', params.list_id);
+  }
+});

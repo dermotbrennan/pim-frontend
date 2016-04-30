@@ -31,7 +31,7 @@ export default ApplicationAdapter.extend({
       });
     }
 
-    console.log("files", this.files);
+    // console.log("files", this.files);
 
     var hash = this._super.apply(this, arguments);
 
@@ -48,7 +48,7 @@ export default ApplicationAdapter.extend({
     var formData = new FormData();
     var root = Object.keys(data)[0];
 
-    console.log("getformdata", data);
+    // console.log("getformdata", data);
 
     // Object.keys(data[root]).forEach(function(key) {
     //   if (typeof data[root][key] !== 'undefined') {
@@ -60,7 +60,7 @@ export default ApplicationAdapter.extend({
     //   }
     // }, this);
 
-    console.log("files", this.files);
+    // console.log("files", this.files);
 
     if (this.files) {
       formData.append(root, JSON.stringify(data.data));

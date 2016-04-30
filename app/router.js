@@ -10,30 +10,37 @@ Router.map(function() {
   this.route('about', {path: '/about'});
   this.route('login');
   this.route('account');
-
-  this.route('item', {
-      path: "/items"
-    }, function() {
-      this.route("index", {path: '/'});
-      this.route("new");
-      // this.route('asset', {
-      //   path: "/:item_id/assets",
-      //   resetNamespace: true
-      // }, function() {
-      //   this.route('show', {
-      //     path: "/:asset_id"
-      //   });
-      //   // this.route('comments', { resetNamespace: true }, function() {
-      //   //   this.route('new');
-      //   // });
-      // });
-      this.route("show", {
-        path: "/:item_id",
-      });
-      this.route("edit", {
-        path: "/:item_id/edit"
-      });
+  this.route('list', {
+    path: "/lists",
+  }, function() {
+    this.route("new");
+    this.route("id", {
+      path: "/:list_id/edit"
     });
+  });
+  this.route('item', {
+    path: "/lists/:list_id/items"
+  }, function() {
+    this.route("index", {path: '/'});
+    this.route("new");
+    this.route("show", {
+      path: "/:item_id",
+    });
+    this.route("edit", {
+      path: "/:item_id/edit"
+    });
+    // this.route('asset', {
+    //   path: "/:item_id/assets",
+    //   resetNamespace: true
+    // }, function() {
+    //   this.route('show', {
+    //     path: "/:asset_id"
+    //   });
+    //   // this.route('comments', { resetNamespace: true }, function() {
+    //   //   this.route('new');
+    //   // });
+    // });
+  });
   this.route('about');
 });
 

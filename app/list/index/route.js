@@ -2,10 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    var list = this.modelFor('item');
-    return this.store.query('item', {list_id: list.id});
+    return this.store.findAll('list');
   },
   setupController: function(controller, model) {
-    controller.set('items', model);
+    controller.set('lists', model);
   }
 });

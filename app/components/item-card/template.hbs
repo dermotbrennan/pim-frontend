@@ -1,0 +1,11 @@
+<div class="card item-card" style="{{backgroundStyle}}" {{action "goToItem" item}}>
+  <div class="card-footer item-card-footer">
+    {{fa-icon "trash" size=1 click=(action "deleteItem" item) class="item-card-trash"}}
+    <h5 class="item-card-title">
+      {{#link-to 'item.edit' item.id class="card-link"}}{{item.name}}{{/link-to}}
+    </h5>
+    {{#if item.value}}
+    <p class="card-text"><small>{{format-currency item.value}}</small></p>
+    {{/if}}
+  </div>
+</div>

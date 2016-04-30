@@ -8,7 +8,7 @@ export default ApplicationController.extend({
       user.save().then(function() {
         controller.set('showSaveMessage', true);
       }).catch(function(e) {
-        controller.set('errorMessage', e.message)
+        controller.set('errorMessage', e.message);
         controller.set('showSaveMessage', false);
       });
     },
@@ -20,7 +20,7 @@ export default ApplicationController.extend({
       user.save().then(function() {
         controller.set('showChangePasswordSaveMessage', true);
       }).catch(function(e) {
-        controller.set('errorChangePasswordMessage', e.message)
+        controller.set('errorChangePasswordMessage', e.message);
         controller.set('showChangePasswordSaveMessage', false);
       });
     }

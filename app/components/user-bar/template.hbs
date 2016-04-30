@@ -4,7 +4,7 @@
   </li>
   {{#if session.isAuthenticated}}
     <li class="nav-item">
-      {{#link-to 'item.index' class="nav-link"}}My Items{{/link-to}}
+      {{#link-to 'list.index' class="nav-link"}}My Lists{{/link-to}}
     </li>
     <li class="nav-item">
       {{#link-to 'account' class="nav-link"}}Logged in as {{sessionAccount.user.name}}{{/link-to}}

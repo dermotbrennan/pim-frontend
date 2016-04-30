@@ -7,9 +7,14 @@
 </div>
 
 <div class="col-md-12">
-  {{#if isCardLayout}}
-    {{item-list-cards items=items goToItem=(action "goToItem")}}
+  {{#if items}}
+    {{#if isCardLayout}}
+      {{item-list-cards items=items goToItem=(action "goToItem")}}
+    {{else}}
+      {{item-list-table items=items}}
+    {{/if}}
   {{else}}
-    {{item-list-table items=items}}
+    <p>There are no items in this list
+     {{#link-to "item.new"}}{{fa-icon "plus" size=1}}{{/link-to}}</p>
   {{/if}}
 </div>

@@ -1,18 +1,11 @@
 import Ember from 'ember';
-// import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
 
-// var itemsNewRoute = Ember.Route.extend(AuthenticatedRouteMixin);
-var itemsNewRoute = Ember.Route.extend({
+var listsNewRoute = Ember.Route.extend({
   model: function() {
-    var list = this.modelFor('item');
-    var model = this.store.createRecord('item');
-    model.set('list', list);
-    return model;
+    return this.store.createRecord('list');
   },
 
   setupController: function(controller, model) {
-    // console.log('Model', model);
-    // controller.setProperties(model);
     controller.set('model', model);
     // controller.set('breadCrumb', 'New Project');
   },
@@ -36,4 +29,4 @@ var itemsNewRoute = Ember.Route.extend({
   }
 });
 
-export default itemsNewRoute;
+export default listsNewRoute;
