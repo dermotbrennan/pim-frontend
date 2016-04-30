@@ -39,7 +39,7 @@ You will need the following things properly installed on your computer.
 - multiple images per item
 - Item descriptions
 - Item purchase date / age
-- multiple lists per user
+- ~multiple lists per user~
 - admin area
 - Tests
 
