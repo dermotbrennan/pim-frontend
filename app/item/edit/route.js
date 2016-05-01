@@ -1,8 +1,6 @@
-import Ember from 'ember';
-// import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
+import Authenticated from '../../routes/authenticated';
 
-// var itemsEditRoute = Ember.Route.extend(AuthenticatedRouteMixin);
-var itemsEditRoute = Ember.Route.extend({
+export default Authenticated.extend({
   model: function(params) {
     // console.log(params);
     var model = this.store.findRecord('item', params.item_id);
@@ -38,7 +36,14 @@ var itemsEditRoute = Ember.Route.extend({
         return true;
       }
     }
+  },
+
+  setupCrumbs(item) {
+    var crumbs = [
+      {name: "My Lists", path: ['list.index']},
+      {name: item.get('list.name'), path: ['item.index', item.get('list')]},
+      {name: "Editing '" + item.get('name') + "'"},
+    ];
+    return crumbs;
   }
 });
-
-export default itemsEditRoute;

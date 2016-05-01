@@ -1,0 +1,13 @@
+{{#if breadcrumbs.crumbs}}
+  <ol class="breadcrumb">
+    {{#each breadcrumbs.crumbs as |crumb|}}
+      <li class={{if @last active}}>
+        {{#if crumb.path}}
+          {{#link-to params=crumb.path}}{{crumb.name}}{{/link-to}}
+        {{else}}
+          {{crumb.name}}
+        {{/if}}
+      </li>
+    {{/each}}
+  </ol>
+{{/if}}

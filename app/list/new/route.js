@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Authenticated from '../../routes/authenticated';
 
-var listsNewRoute = Ember.Route.extend({
+export default Authenticated.extend({
   model: function() {
     return this.store.createRecord('list');
   },
@@ -28,5 +28,3 @@ var listsNewRoute = Ember.Route.extend({
     }
   }
 });
-
-export default listsNewRoute;

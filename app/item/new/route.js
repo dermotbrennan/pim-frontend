@@ -1,8 +1,6 @@
-import Ember from 'ember';
-// import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
+import Authenticated from '../../routes/authenticated';
 
-// var itemsNewRoute = Ember.Route.extend(AuthenticatedRouteMixin);
-var itemsNewRoute = Ember.Route.extend({
+export default Authenticated.extend({
   model: function() {
     var list = this.modelFor('item');
     var model = this.store.createRecord('item');
@@ -35,5 +33,3 @@ var itemsNewRoute = Ember.Route.extend({
     }
   }
 });
-
-export default itemsNewRoute;

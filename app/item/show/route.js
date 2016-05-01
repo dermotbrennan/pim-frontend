@@ -1,8 +1,6 @@
-import Ember from 'ember';
-// import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
+import Authenticated from '../../routes/authenticated';
 
-// var itemsShowRoute = Ember.Route.extend(AuthenticatedRouteMixin);
-var itemsShowRoute = Ember.Route.extend({
+export default Authenticated.extend({
   model: function(params) {
     var model = this.store.findRecord('item', params.item_id, { include : 'all' });
     return model;
@@ -21,5 +19,3 @@ var itemsShowRoute = Ember.Route.extend({
     // controller.set('breadCrumbModel', Ember.computed.alias("model"));
   }
 });
-
-export default itemsShowRoute;

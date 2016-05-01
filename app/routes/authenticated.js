@@ -1,9 +1,10 @@
 import Ember from 'ember';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
+import Breadcrumbed from './breadcrumbed';
 
 const { service } = Ember.inject;
 
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
+export default Ember.Route.extend(AuthenticatedRouteMixin, Breadcrumbed, {
   sessionAccount: service('session-account'),
   session: service(),
 
