@@ -13,7 +13,9 @@
     </div>
   {{else}}
     <p>
-      You have no lists - {{#link-to "list.new"}}{{fa-icon "plus" size=2}}{{/link-to}}
+      You have no lists
+      <br/>
+      {{#link-to 'list.new' tagName='button' class="btn btn-primary"}}Create List{{/link-to}}
     </p>
   {{/if}}
 </div>

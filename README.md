@@ -33,10 +33,10 @@ You will need the following things properly installed on your computer.
 - ~~Table view~~
   - ~~amount totals~~
 - ~multiple lists per user~  
-  breadcrumbs
-- animations - liquidfire
-- Registration / Login using ember-simple-auth
+  ~breadcrumbs~
+  Registration / Login using ember-simple-auth
   Handle redirecting to login if not logged in
+- animations - liquidfire
 - Inline editing of items
 - Responsive layout / responsive images
 - multiple images per item

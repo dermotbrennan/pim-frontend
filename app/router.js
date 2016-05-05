@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('index', {path: '/'});
   this.route('about', {path: '/about'});
   this.route('login');
+  this.route('register');
   this.route('account');
   this.route('list', {
     path: "/lists",

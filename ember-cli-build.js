@@ -11,8 +11,11 @@ module.exports = function(defaults) {
         test: '.env.test',
         production: '.env.production'
       }
-    }
+    },
     // Add options here
+    'ember-bootstrap': {
+        'importBootstrapCSS': false
+     }
   });
 
   // Use `app.import` to add additional libraries to the generated
