@@ -4,42 +4,15 @@ import DS from 'ember-data';
 var attr = DS.attr;
 // var belongsTo = DS.belongsTo;
 
-import {
-  validator, buildValidations
-}
-from 'ember-cp-validations';
+import { buildValidations } from 'ember-cp-validations';
 
-const Validations = buildValidations({
-  username: validator('presence', true),
-  name: validator('presence', true),
-  password: [
-    validator('presence', true),
-    validator('length', {
-      min: 4,
-      max: 8
-    })
-  ],
-  password_confirmation: [
-    validator('presence', true),
-    validator('confirmation', {
-      on: 'password',
-      message: '{description} do not match',
-      description: 'Passwords'
-    })
-  ]
-  // email: [
-  //   validator('presence', true),
-  //   validator('format', { type: 'email' })
-  // ],
-  // emailConfirmation: [
-  //   validator('presence', true),
-  //   validator('confirmation', {
-  //     on: 'email',
-  //     message: '{description} do not match',
-  //     description: 'Email addresses'
-  //   })
-  // ]
-});
+import userValidations from './user-validations';
+import passwordValidations from './password-validations';
+
+var allUserValidations = Ember.copy(userValidations, true);
+Ember.merge(allUserValidations, passwordValidations);
+
+const Validations = buildValidations(allUserValidations);
 
 export default DS.Model.extend(Validations, {
   name: attr('string'),
@@ -47,6 +20,7 @@ export default DS.Model.extend(Validations, {
   // email: attr('string'),
   password: attr('string'),
   password_confirmation: attr('string'),
+  createdAt: attr('date'),
   updatedAt: attr('date'),
 
   // an alias for ember-simple-auth

@@ -1,22 +1,26 @@
 import DS from 'ember-data';
-import EmberValidations from 'ember-validations';
 
 var attr = DS.attr;
 var belongsTo = DS.belongsTo;
 var hasMany = DS.hasMany;
 
-export default DS.Model.extend(EmberValidations, {
+import {validator, buildValidations} from 'ember-cp-validations';
+
+const Validations = buildValidations({
+  name: {
+    validators: [
+      validator('presence', true),
+      validator('length', {
+        min: 3
+      })
+    ]
+  }
+});
+
+export default DS.Model.extend(Validations, {
   name: attr('string'),
   user: belongsTo('user'),
   items: hasMany('item'),
   created_at: attr('date'),
-  updated_at: attr('date'),
-  validations: {
-    'name': {
-      presence: true,
-      length: {
-        minimum: 3
-      }
-    }
-  }
+  updated_at: attr('date')
 });

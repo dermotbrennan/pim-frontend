@@ -1,0 +1,13 @@
+{{#if showSaveMessage}}
+  <div class="alert alert-success" role="alert">Details Saved!</div>
+{{/if}}
+
+{{#if errorMessage}}
+  <div class="alert alert-danger" role="alert">{{errorMessage}}</div>
+{{/if}}
+
+{{#bs-form formLayout="horizontal" model=this action="changeDetails"}}
+  {{bs-form-element controlType="username" label="Username" placeholder="Username" property="username"}}
+  {{bs-form-element controlType="name" label="Name" placeholder="Name" property="name"}}
+  {{bs-button defaultText="Update Details" type="primary" buttonType="submit" disabled=isNotValid}}
+{{/bs-form}}

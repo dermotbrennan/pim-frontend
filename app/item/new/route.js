@@ -15,6 +15,16 @@ export default Authenticated.extend({
     // controller.set('breadCrumb', 'New Project');
   },
 
+  setupCrumbs() {
+    var list = this.modelFor('item');
+    var crumbs = [
+      {name: "My Lists", path: ['list.index']},
+      {name: list.get('name'), path: ['item.index', list.id]},
+      {name: "Add Item"}
+    ];
+    return crumbs;
+  },
+
   actions: {
     willTransition(transition) {
       var model = this.controller.get('model');

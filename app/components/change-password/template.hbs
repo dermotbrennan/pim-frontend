@@ -1,0 +1,13 @@
+{{#if showChangePasswordSaveMessage}}
+  <div class="alert alert-success" role="alert">Password Updated!</div>
+{{/if}}
+
+{{#if errorChangePasswordMessage}}
+  <div class="alert alert-danger" role="alert">{{errorChangePasswordMessage}}</div>
+{{/if}}
+
+{{#bs-form formLayout="horizontal" model=this action="changePassword"}}
+  {{bs-form-element controlType="password" label="Password" placeholder="Password" property="password"}}
+  {{bs-form-element controlType="password" label="Confirm Password" placeholder="Confirm Password" property="password_confirmation"}}
+  {{bs-button defaultText="Change Password" type="primary" buttonType="submit" disabled=isNotValid}}
+{{/bs-form}}
