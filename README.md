@@ -31,13 +31,14 @@ You will need the following things properly installed on your computer.
 
 - ~~Image upload~~
 - ~~Table view~~
-  - ~~amount totals~~
+- - ~~amount totals~~
 - ~~multiple lists per user~~
-  ~~breadcrumbs~~
-  ~~Registration / Login using ember-simple-auth~~
-  Handle redirecting to login if not logged in
-  loading / error screens
+- ~~breadcrumbs~~
+- ~~Registration / Login using ember-simple-auth~~
+- loading / error screens
+- Handle redirecting to login if not logged in
 - animations - liquidfire
+- fastboot
 - Inline editing of items
 - Responsive layout / responsive images
 - multiple images per item
@@ -45,7 +46,6 @@ You will need the following things properly installed on your computer.
 - Item purchase date / age
 - admin area
 - Tests
-  fastboot
 
 # Legal
 
