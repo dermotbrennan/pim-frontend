@@ -35,7 +35,7 @@ You will need the following things properly installed on your computer.
 - ~~multiple lists per user~~
 - ~~breadcrumbs~~
 - ~~Registration / Login using ember-simple-auth~~
-- loading / error screens
+- ~~loading / error screens~~
 - Handle redirecting to login if not logged in
 - animations - liquidfire
 - fastboot
