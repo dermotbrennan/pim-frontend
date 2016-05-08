@@ -82,3 +82,13 @@ $navbar-dark-color: transparent;
 .list-card-title {
   @extend .item-card-title;
 }
+
+/* Loading screen */
+.loading-screen {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary-color;
+  height: 50vh;
+}
