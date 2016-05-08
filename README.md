@@ -2,7 +2,7 @@
 
 This is a demo application I've developed for the purpose of learning Ember.js
 
-Take a look at the live demo.
+Take a look at the [live demo](http://pim.dermotbrennan.net/).
 
 See also the Rails API backend repository for this application.
 
@@ -29,23 +29,23 @@ You will need the following things properly installed on your computer.
 
 # Todo list
 
- [x] Image upload
- [x] Table view
--  [x] amount totals
- [x] multiple lists per user
- [x] breadcrumbs
- [x] Registration / Login using ember-simple-auth
- [x] loading / error screens
- [ ] Handle redirecting to login if not logged in
- [ ] animations using liquidfire
- [ ] fastboot
- [ ] Inline editing of items
- [ ] Responsive layout / responsive images
- [ ] multiple images per item
- [ ] Item descriptions
- [ ] Item purchase date / age
- [ ] admin area
- [ ] Tests
+- [x] Image upload
+- [x] Table view
+- [x] amount totals
+- [x] multiple lists per user
+- [x] breadcrumbs
+- [x] Registration / Login using ember-simple-auth
+- [x] loading / error screens
+- [ ] Handle redirecting to login if not logged in
+- [ ] animations using liquidfire
+- [ ] fastboot
+- [ ] Inline editing of items
+- [ ] Responsive layout / responsive images
+- [ ] multiple images per item
+- [ ] Item descriptions
+- [ ] Item purchase date / age
+- [ ] admin area
+- [ ] Tests
 
 # Legal
 
