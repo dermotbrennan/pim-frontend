@@ -7,7 +7,7 @@ export default Authenticated.extend({
   setupController: function(controller, model) {
     controller.set('lists', model);
   },
-  setupCrumbs(item) {
+  setupCrumbs() {
     var crumbs = [
       {name: "My Lists"},
     ];
