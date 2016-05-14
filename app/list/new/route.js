@@ -10,7 +10,7 @@ export default Authenticated.extend({
     // controller.set('breadCrumb', 'New Project');
   },
 
-  setupCrumbs(item) {
+  setupCrumbs() {
     var crumbs = [
       {name: "My Lists", path: ['list.index']},
       {name: "New List"}

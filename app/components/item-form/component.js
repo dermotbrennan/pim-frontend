@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  store: Ember.inject.service(),
   isNotValid: Ember.computed("model.validations.isValid", function() {
     return !this.get('model.validations.isValid');
   }),
@@ -22,6 +23,9 @@ export default Ember.Component.extend({
 
       model.save().then(function() {
         console.log("saved..");
+        component.set('model', component.get('store').createRecord('item'));
+        model = component.get('model');
+        model.rollbackAttributes();
         component.set('showSaveMessage', true);
       }).catch(function() {
         component.set('showSaveMessage', false);

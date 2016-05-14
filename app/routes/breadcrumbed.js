@@ -15,7 +15,7 @@ export default Ember.Mixin.create({
   }.on('deactivate'),
 
   afterModel: function(model) {
-    if (typeof(this.setupCrumbs) == 'function') {
+    if (typeof(this.setupCrumbs) === 'function') {
       this.routeCrumbs = this.setupCrumbs(model);
       this.get('breadcrumbsService').setCrumbs(this.routeCrumbs);
     }
