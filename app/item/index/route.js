@@ -8,7 +8,7 @@ export default Authenticated.extend({
   setupController: function(controller, model) {
     controller.set('items', model);
   },
-  setupCrumbs(item) {
+  setupCrumbs() {
     var list = this.modelFor('item');
     var crumbs = [
       {name: "My Lists", path: ['list.index']},

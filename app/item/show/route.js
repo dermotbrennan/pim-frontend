@@ -6,16 +6,16 @@ export default Authenticated.extend({
     return model;
   },
 
-  setupController: function(controller, model) {
-    console.log('Show Model', model);
-    // controller.setProperties(model);
-    controller.set('model', model);
-    controller.set('breadCrumb', Ember.computed("model.name", {
-      get() {
-        let modelName = this.get("model.name");
-        return `Breadcrumb ${modelName}`;
-      }
-    }));
-    // controller.set('breadCrumbModel', Ember.computed.alias("model"));
-  }
+  // setupController: function(controller, model) {
+  //   console.log('Show Model', model);
+  //   // controller.setProperties(model);
+  //   controller.set('model', model);
+  //   controller.set('breadCrumb', Ember.computed("model.name", {
+  //     get() {
+  //       let modelName = this.get("model.name");
+  //       return `Breadcrumb ${modelName}`;
+  //     }
+  //   }));
+  //   // controller.set('breadCrumbModel', Ember.computed.alias("model"));
+  // }
 });
