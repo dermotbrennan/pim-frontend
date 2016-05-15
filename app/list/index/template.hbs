@@ -1,21 +1,29 @@
-<div class="col-md-12">
-  <div class="pull-md-right">
-    {{#link-to "list.new"}}{{fa-icon "plus" size=2}}{{/link-to}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="pull-md-right">
+        {{#link-to "list.new"}}{{fa-icon "plus" size=2}}{{/link-to}}
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="col-md-12">
-  {{#if lists}}
-    <div class="card-deck">
-      {{#each lists as |list|}}
-        {{list-card list=list goToList=(action "goToList")}}
-      {{/each}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {{#if lists}}
+        <div class="card-deck">
+          {{#each lists as |list|}}
+            {{list-card list=list goToList=(action "goToList")}}
+          {{/each}}
+        </div>
+      {{else}}
+        <p>
+          You have no lists
+          <br/>
+          {{#link-to 'list.new' tagName='button' class="btn btn-primary"}}Create List{{/link-to}}
+        </p>
+      {{/if}}
     </div>
-  {{else}}
-    <p>
-      You have no lists
-      <br/>
-      {{#link-to 'list.new' tagName='button' class="btn btn-primary"}}Create List{{/link-to}}
-    </p>
-  {{/if}}
+  </div>
 </div>

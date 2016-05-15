@@ -49,6 +49,7 @@
     "ember-simple-auth": "1.0.1",
     "ember-simple-auth-token": "1.0.0",
     "ember-truth-helpers": "^1.2.0",
+    "liquid-fire": "0.23.1",
     "loader.js": "^4.0.0",
     "validations": "0.1.3"
   }

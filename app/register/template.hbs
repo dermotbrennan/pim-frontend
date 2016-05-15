@@ -1,24 +1,28 @@
-<div class="col-md-8 center-block">
-  <h1>Register</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 center-block">
+      <h1>Register</h1>
 
 
-  {{#if anyErrors}}
-    <div class="alert alert-danger" role="alert">
-      <p>{{errorMessage}}</p>
+      {{#if anyErrors}}
+        <div class="alert alert-danger" role="alert">
+          <p>{{errorMessage}}</p>
 
-      <ul>
-        {{#each model.errors as |error|}}
-          <li>{{error.attribute}} {{error.message}}</li>
-        {{/each}}
-      </ul>
+          <ul>
+            {{#each model.errors as |error|}}
+              <li>{{error.attribute}} {{error.message}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/if}}
+
+      {{#bs-form formLayout="horizontal" model=model action="register"}}
+        {{bs-form-element controlType="username" label="Username" placeholder="Username" property="username"}}
+        {{bs-form-element controlType="name" label="Name" placeholder="Name" property="name"}}
+        {{bs-form-element controlType="password" label="Password" placeholder="Password" property="password"}}
+        {{bs-form-element controlType="password" label="Confirm Password" placeholder="Confirm Password" property="password_confirmation"}}
+        {{bs-button defaultText="Submit" type="primary" buttonType="submit" disabled=isNotValid}}
+      {{/bs-form}}
     </div>
-  {{/if}}
-
-  {{#bs-form formLayout="horizontal" model=model action="register"}}
-    {{bs-form-element controlType="username" label="Username" placeholder="Username" property="username"}}
-    {{bs-form-element controlType="name" label="Name" placeholder="Name" property="name"}}
-    {{bs-form-element controlType="password" label="Password" placeholder="Password" property="password"}}
-    {{bs-form-element controlType="password" label="Confirm Password" placeholder="Confirm Password" property="password_confirmation"}}
-    {{bs-button defaultText="Submit" type="primary" buttonType="submit" disabled=isNotValid}}
-  {{/bs-form}}
+  </div>
 </div>

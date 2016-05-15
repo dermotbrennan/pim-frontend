@@ -1,20 +1,24 @@
-<div class="col-md-12">
-  <div class="pull-md-right">
-    {{#link-to "item.index" (query-params layout="cards")}}{{fa-icon "th" size=2}}{{/link-to}}
-    {{#link-to "item.index" (query-params layout="table")}}{{fa-icon "table" size=2}}{{/link-to}}
-    {{#link-to "item.new"}}{{fa-icon "plus" size=2}}{{/link-to}}
-  </div>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="pull-md-right">
+        {{#link-to "item.index" (query-params layout="cards")}}{{fa-icon "th" size=2}}{{/link-to}}
+        {{#link-to "item.index" (query-params layout="table")}}{{fa-icon "table" size=2}}{{/link-to}}
+        {{#link-to "item.new"}}{{fa-icon "plus" size=2}}{{/link-to}}
+      </div>
+    </div>
 
-<div class="col-md-12">
-  {{#if items}}
-    {{#if isCardLayout}}
-      {{item-list-cards items=items goToItem=(action "goToItem")}}
-    {{else}}
-      {{item-list-table items=items}}
-    {{/if}}
-  {{else}}
-    <p>There are no items in this list
-     {{#link-to "item.new"}}{{fa-icon "plus" size=1}}{{/link-to}}</p>
-  {{/if}}
+    <div class="col-md-12">
+      {{#if items}}
+        {{#if isCardLayout}}
+          {{item-list-cards items=items goToItem=(action "goToItem")}}
+        {{else}}
+          {{item-list-table items=items}}
+        {{/if}}
+      {{else}}
+        <p>There are no items in this list
+         {{#link-to "item.new"}}{{fa-icon "plus" size=1}}{{/link-to}}</p>
+      {{/if}}
+    </div>
+  </div>
 </div>

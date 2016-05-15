@@ -1,19 +1,23 @@
-<div class="col-md-8">
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
 
-  <h1>Manage Account</h1>
+      <h1>Manage Account</h1>
 
-  Hiya, {{sessionAccount.user.name}}.
+      Hiya, {{sessionAccount.user.name}}.
 
-  <hr>
+      <hr>
 
-  <h2>Change Details</h2>
+      <h2>Change Details</h2>
 
-  {{change-user-details model=model}}
+      {{change-user-details model=model}}
 
-  <hr>
+      <hr>
 
-  <h2>Change Password</h2>
+      <h2>Change Password</h2>
 
-  {{change-password model=model}}
+      {{change-password model=model}}
 
+    </div>
+  </div>
 </div>

@@ -18,5 +18,13 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, Breadcrumbed, {
 
   _loadCurrentUser() {
     return this.get('sessionAccount').loadCurrentUser();
+  },
+
+  renderTemplate() {
+    if (this.get('routeName').indexOf('.') < 0) {
+      this.render('full-content');
+    } else {
+      this.render();
+    }
   }
 });
